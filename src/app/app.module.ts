@@ -1,40 +1,46 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Camera } from '@ionic-native/camera';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-import { IonicStorageModule, Storage } from '@ionic/storage';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { Items } from '../mocks/providers/items';
-import { Settings } from '../providers/providers';
-import { User } from '../providers/providers';
-import { Api } from '../providers/providers';
+//*********** ionic Native **************/
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { Geolocation } from '@ionic-native/geolocation';
+
 import { MyApp } from './app.component';
 
-// The translate loader needs to know where to load i18n files
-// in Ionic's static asset pipeline.
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+//***********  Angularfire2 v5 **************/
 
-export function provideSettings(storage: Storage) {
-  /**
-   * The Settings provider takes a set of default settings for your app.
-   *
-   * You can add new settings options at any time. Once the settings are saved,
-   * these values will not overwrite the saved values (this can be done manually if desired).
-   */
-  return new Settings(storage, {
-    option1: true,
-    option2: 'Ionitron J. Framework',
-    option3: '3',
-    option4: 'Hello'
-  });
-}
+import { AngularFireModule } from 'angularfire2';
+// New imports to update based on AngularFire2 version 4
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+//***********  Facebook **************/
+import { Facebook } from '@ionic-native/facebook';
+//***********  Google plus **************/
+import { GooglePlus } from '@ionic-native/google-plus';
+
+//*********** Provider **************/
+import { AuthData } from '../providers/auth-data';
+import { RadioPlayer } from '../providers/radio-service';
+
+
+//************** import image gallery *********************//
+
+import * as ionicGalleryModal from 'ionic-gallery-modal';
+import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+
+
+//********** firebase configuration  ************ */
+export const config = {
+  apiKey: 'AIzaSyBHgb6Ywtft1vYOix70kldneh5ErXIEPBE',
+  authDomain: 'personals-ios.firebaseapp.com',
+  databaseURL: 'https://personals-ios.firebaseio.com',
+  projectId: 'personals-ios',
+  storageBucket: 'personals-ios.appspot.com',
+  messagingSenderId: '805623304193' 
+};
 
 @NgModule({
   declarations: [
@@ -42,31 +48,31 @@ export function provideSettings(storage: Storage) {
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    }),
+    ionicGalleryModal.GalleryModalModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp
   ],
   providers: [
-    Api,
-    Items,
-    User,
-    Camera,
-    SplashScreen,
     StatusBar,
-    { provide: Settings, useFactory: provideSettings, deps: [Storage] },
-    // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    SplashScreen,
+    Geolocation,
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: ionicGalleryModal.GalleryModalHammerConfig,
+    },
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthData,
+    Facebook,
+    RadioPlayer,
+    Facebook,
+    GooglePlus
   ]
 })
-export class AppModule { }
+export class AppModule {}
