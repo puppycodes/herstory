@@ -9,25 +9,25 @@
 <ion-content fullscreen="true" no-padding >
 
     <div class="profile-box">
-        <div text-center>
-            <img *ngIf="(profile | async)?.photo" src="{{(profile | async)?.photo}}" class="edit-avatar pop-in" alt="">
-            <img  *ngIf="!(profile | async)?.photo" src = "https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD.jpg" class="edit-avatar pop-in" alt="">
-            <p class="name-text">{{(profile | async)?.name}}</p>
-        </div>
+        <!-- <div text-left>
+            <img *ngIf="(profile | async)?.photo" src="{{(profile | async)?.photo}}" class="edit-avatar pop-in" alt=""> --> -->
+            <!-- <img  *ngIf="!(profile | async)?.photo" src = "" class="edit-avatar pop-in" alt=""> -->
+            <!-- <p class="name-text">{{(profile | async)?.name}}</p>
+        </div> -->
     </div>
 
     <div padding>
         <ion-list no-lines >
+          <ion-item>
+            <ion-icon name="ios-card" item-left></ion-icon>
+            <h2>{{(profile | async)?.name}}</h2>
+            <p>Name</p>
+          </ion-item>
+
             <ion-item>
                 <ion-icon name="ios-mail" item-left></ion-icon>
                 <h2>{{(profile | async)?.email}}</h2>
                 <p>E-mail</p>
-            </ion-item>
-
-            <ion-item>
-              <ion-icon name="ios-card" item-left></ion-icon>
-              <h2>{{(profile | async)?.name}}</h2>
-              <p>Name</p>
             </ion-item>
 
             <ion-item>
@@ -43,7 +43,7 @@
             </ion-item>
         </ion-list>
 
-        <button ion-button block mode="ios" color="blue2" (click)="logout()">
+        <button ion-button block mode="ios" color="primary" (click)="logout()">
           Logout
         </button>
     </div>

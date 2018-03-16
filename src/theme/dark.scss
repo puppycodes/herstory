@@ -1,6 +1,6 @@
 // https://medium.com/@harrybailey/dark-theme-in-ionic-2-beta-as-of-today-d54e3fd89217
 // Dark Theme
-// — — — — — — — — — — — — — — — — — 
+// — — — — — — — — — — — — — — — — —
 // $colors: (
 // primary: #387ef5,
 //  secondary: #32db64,
@@ -36,10 +36,10 @@
 // ) !default;
 
 
-$text-color:                 #fff !default;
+$text-color:                 #000 !default;
 $link-color:                 color($colors, primary) !default;
-$background-color:           #222 !default;
-$subdued-text-color:         #666 !default;
+$background-color:           #00FFFF !default;
+$subdued-text-color:         #1a1a1a !default;
 
 $font-family-base:           -apple-system, "Helvetica Neue", "Roboto", sans-serif !default;
 $font-size-base:             1.4rem !default; // 1.4rem == 14px

@@ -7,10 +7,10 @@ page-after-login {
   .profile-box{
     height: 250px;
     padding-top: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #dddddd;
-    background-image: url("https://unsplash.it/800/600?blur&image=206");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background-color: #fff;
+    // background-image: url("https://unsplash.it/800/600?blur&image=206");
   }
   .edit-avatar {
     border-radius: 100%;
@@ -20,7 +20,7 @@ page-after-login {
 
   .name-text {
     font-size: 22px;
-    color: #ffffff;
+    color: #000000;
   }
-  
+
 }

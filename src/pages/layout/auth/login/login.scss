@@ -30,24 +30,24 @@ page-login {
   }
 	.error-message p{
 		text-align: right;
-		color:white;
+		color: white;
 	}
   ion-item {
-    color: white !important;
+    color: black !important;
     padding-left: 0px !important;
     // margin-bottom: 10px;
     background-color: transparent !important;
     font-size: 0.9em;
   }
 	.item-inner{
-		border-bottom: 1px solid white !important;
-    box-shadow: inset 0 -1px 0 transparent; 
+		border-bottom: 1px solid black !important;
+    box-shadow: inset 0 -1px 0 transparent;
 	}
   ::-webkit-input-placeholder {
-    color: white !important;
+    color: black !important;
   }
   .login-container {
-    color: white;
+    color: black;
     position: absolute;
     top: 0;
     padding: 10vw;

@@ -10,34 +10,25 @@ export class IntroPage {
 
   slides = [
     {
-      title: "Welcome to ionic 3",
-      description: "This is introduction header.<br>Walkthrough page. ",
+      title: "",
+      description: "",
       image: "./assets/slide1.png",
-      color: "#3465a4"
+      color: "#00FFFF"
     },
     {
-      title: "Layout with firebase",
-      description: "This is introduction header.<br>Walkthrough page. ",
+      title: "",
+      description: "",
       image: "./assets/slide2.png",
-      color: "#73d216"
-    },
-    {
-      title: "Components",
-      description: "This is introduction header.<br>Walkthrough page. ",
-      image: "./assets/slide3.png",
-      color: "#cc0000"
-    },
-    {
-      title: "Theme",
-      description: "This is introduction header.<br>Walkthrough page. ",
-      image: "./assets/slide4.png",
-      color: "#75507b"
-      
+      color: "#00FFFF"
     }
   ];
 
 
   constructor(public navCtrl: NavController) {
+  }
+
+  loginWithEmail(){
+    this.navCtrl.push('LoginPage');
   }
 
 }

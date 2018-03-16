@@ -2,10 +2,10 @@
 <ion-content fullscreen class="tutorial-page">
   <ion-slides pager="true">
 
-      <ion-slide *ngFor="let slide of slides" [ngStyle]="{'background-color': slide.color} "> 
+      <ion-slide *ngFor="let slide of slides" [ngStyle]="{'background-color': slide.color} ">
             <ion-toolbar transparent>
                   <ion-buttons end>
-                      <button ion-button menuToggle clear color="light">Skip</button>                                
+                      <!-- <button ion-button menuToggle clear color="light">Skip</button> -->
                   </ion-buttons>
             </ion-toolbar>
 
@@ -22,18 +22,18 @@
       <ion-slide>
             <ion-toolbar transparent>
                   <ion-buttons end>
-                      <button ion-button menuToggle clear color="light"></button>                                
+                      <button ion-button menuToggle clear color="light"></button>
                   </ion-buttons>
             </ion-toolbar>
             <div class="introBox" margin-top>
                 <img src="./assets/slide5.png" class="slide-image"/>
                 <!--<h2 class="slide-title">Let's get started</h2>-->
-                <button ion-button large outline round icon-right color="primary" menuToggle margin-top>
-                  Let's get started
+                <button ion-button large outline round icon-right color="primary" (click)="loginWithEmail()" margin-top>
+                  Sign Up / Sign
                   <ion-icon name="arrow-forward"></ion-icon>
                 </button>
             </div>
       </ion-slide>
   </ion-slides>
 
-</ion-content>         
+</ion-content>
