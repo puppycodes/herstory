@@ -46,7 +46,7 @@ darkGray:   #333333,
     contrast: #222
   ),
   ios:(
-    base: #ffffff,
+    base: #000000,
     contrast: #84BF41
   ),
   red:(
@@ -357,6 +357,16 @@ darkGray:   #333333,
 );
 $text-input-md-show-focus-highlight: false;
 
+
+// ***** quick fixes ******
+
+.icon-ios-light {
+    color: #000000 !important;
+}
+
+#menu-ios .menu-header {
+display: none !important;
+}
 
 // App iOS Variables
 // --------------------------------------------------
