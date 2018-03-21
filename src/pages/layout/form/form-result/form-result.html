@@ -9,7 +9,7 @@
         <button color="light" ion-button icon-only>
             <ion-icon name="more"></ion-icon>
         </button>
-    </ion-buttons> 
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -19,9 +19,9 @@
     <ion-list>
       <ion-item-sliding *ngFor="let message of messagesArray">
         <ion-item>
-          <ion-avatar item-left>
+          <!-- <ion-avatar item-left>
             <img [src]="message.imgProfile">
-          </ion-avatar>
+          </ion-avatar> -->
           <h2>to:{{message.toName}}</h2>
           <h3>title: {{message.messageTitle}}</h3>
           <p>body: {{message.messageBody}}</p>
@@ -37,6 +37,6 @@
 
     <ion-fab right bottom (click)="createMessage()">
         <button ion-fab color="green"><ion-icon name="md-add" ></ion-icon></button>
-    </ion-fab>   
+    </ion-fab>
 
 </ion-content>

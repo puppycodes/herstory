@@ -41,7 +41,7 @@ export class LoginPage {
           console.log("error");
       } else {
         let loadingPopup = this.loadingCtrl.create({
-          spinner: 'crescent', 
+          spinner: 'crescent',
           content: ''
         });
         loadingPopup.present();
