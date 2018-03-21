@@ -360,6 +360,10 @@ $text-input-md-show-focus-highlight: false;
 
 // ***** quick fixes ******
 
+ion-app {
+  top: 10px !important;
+}
+
 .icon-ios-light {
     color: #000000 !important;
 }
