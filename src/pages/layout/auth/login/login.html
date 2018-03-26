@@ -6,9 +6,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content [ngStyle]="{'background-color': '#00FFFF'}">
+<ion-content>
   <div class="login-container">
-    <img class="logo" src="./assets/babes.png" />
+    <div class="logo-text"><span>In Search of Babes</span></div>
 
     <!--*********** Form ***********-->
     <form [formGroup]="loginForm" (submit)="login()" novalidate>
@@ -32,11 +32,11 @@
       </ion-item>
 
       <div class="submit-box">
-        <button ion-button mode="ios" block type="submit" color="primary">Log in</button>
+        <button ion-button mode="ios" block type="submit" color="primary">Log In</button>
 
 
         <button ion-button type="button" mode="ios" block icon-left color="light" outline (click)="createAccount()" margin-top>
-            <ion-icon name="ios-create"></ion-icon> Create new account
+            Create Account
         </button>
       </div>
     </form>

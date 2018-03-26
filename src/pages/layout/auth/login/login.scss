@@ -1,24 +1,31 @@
 page-login {
 
+  .content-ios {
+      color: #000;
+      background-color: #00FFFF !important;
+    }
+
   ion-content {
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-color: transparent;
+   background-color: #00FFFF;
   }
   .scroll-content {
     margin-top: 0 !important;
   }
 
-  .logo {
-    width: 110px;
-    height: 120px;
-   // -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
-    padding-top: 2vh;
-    margin-bottom: 8vh;
+  .logo-text {
+    font-size: 25px;
+    font-family: 'Folio Std';
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 150px;
+    margin: auto;
   }
+
+
   span {
-    color: white;
+    color: black;
   }
+
   .submit-box{
     margin-top: 10px;
     text-align: center;
@@ -28,9 +35,9 @@ page-login {
     border-bottom-color:  transparent !important;
     box-shadow: inset 0 -1px 0 0  transparent !important;
   }
-	.error-message p{
+	.error-message p {
 		text-align: right;
-		color: white;
+		color: black;
 	}
   ion-item {
     color: black !important;

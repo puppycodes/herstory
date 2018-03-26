@@ -1,7 +1,7 @@
 page-main{
 
   ion-content {
-    background-color: #00FFFF !important;
+    background-color: #00FFFF;
   }
 
   .scroll-content {
@@ -24,13 +24,13 @@ page-main{
     text-align: center;
   }
 
-  .error-message .item-inner{
+  .error-message .item-inner {
     border-bottom-color:  transparent !important;
     box-shadow: inset 0 -1px 0 0  transparent !important;
   }
-	.error-message p{
+	.error-message p {
 		text-align: right;
-		color:white;
+		color: black;
 	}
   ion-item {
     color: white !important;
@@ -39,7 +39,7 @@ page-main{
     background-color: transparent !important;
     font-size: 0.9em;
   }
-	.item-inner{
+	.item-inner {
 		border-bottom: 1px solid white !important;
     box-shadow: inset 0 -1px 0 transparent;
 	}

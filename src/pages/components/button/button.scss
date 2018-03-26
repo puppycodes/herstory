@@ -2,4 +2,23 @@ page-button {
     .text-on-bottom > .button-inner {
         flex-direction: column;
     }
-}   
+}
+
+.button-ios-primary {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid black;
+  font-family: 'Folio Std';
+  font-weight: medium;
+}
+
+.button-outline-ios-light {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid black;
+  font-family: 'Folio Std';
+  font-weight: medium;
+}
+
+.ion-ios-create {
+}
