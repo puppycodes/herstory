@@ -1,27 +1,7 @@
-// Ionic Variables and Theming. For more info, please see:
-// http://ionicframework.com/docs/v2/theming/
 $font-path: "../assets/fonts";
 
 @import "ionic.globals";
 
-
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
-
-
-
-
-// Named Color Variables
-// --------------------------------------------------
-// Named colors makes it easy to reuse colors on various components.
-// It's highly recommended to change the default colors
-// to match your app's branding. Ionic uses a Sass map of
-// colors so you can add, rename and remove colors as needed.
-// The "primary" color is the only required color in the map.
 
 $colors: (
   primary:    #000000,
@@ -29,8 +9,7 @@ $colors: (
   danger:     #f53d3d,
   light:      #ffffff,
   dark:       #222,
-darkGray:   #333333,
-
+  darkGray:   #333333,
 
 
   special-blue:(
@@ -362,7 +341,7 @@ $text-input-md-show-focus-highlight: false;
 
 ion-app, ion-nav, ion-tab, ion-tabs, .app-root {
 
-    
+
 
 }
 
@@ -418,3 +397,51 @@ display: none !important;
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {
+    font-family: 'Folio Std';
+    src: url('../assets/fonts/FolioStd-BoldCondensed.woff2') format('woff2'),
+        url('../assets/fonts/FolioStd-BoldCondensed.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Folio Std';
+    src: url('../assets/fonts/FolioStd-Light.woff2') format('woff2'),
+        url('../assets/fonts/FolioStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Folio Std';
+    src: url('../assets/fonts/FolioStd-Bold.woff2') format('woff2'),
+        url('../assets/fonts/FolioStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Folio Std';
+    src: url('../assets/fonts/FolioStd-Medium.woff2') format('woff2'),
+        url('../assets/fonts/FolioStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Folio Std';
+    src: url('../assets/fonts/FolioStd-ExtraBold.woff2') format('woff2'),
+        url('../assets/fonts/FolioStd-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Portrait Text';
+    src: url('../assets/fonts/PortraitText-Regular.woff2') format('woff2'),
+        url('../assets/fonts/PortraitText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
