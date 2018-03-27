@@ -55,6 +55,8 @@ export class MyApp {
 
               // {name:'Search',component:'SearchPage'},
               // {name:'Timeline',component: 'TimelinePage'}
+
+              {name:'Options',component:'SelectOptionPage'},
           ]
         }, {
           // title: 'Components',
@@ -83,7 +85,7 @@ export class MyApp {
           //
           //       {name:'Range',component:'RangePage'},
           //       {name:'Search bar', component:'SearchBarPage'},
-          //       {name:'Select option',component:'SelectOptionPage'},
+
           //       {name:'Segment',component:'SegmentPage'},
           //       {name:'Shrinking',component:'ShrinkingPage'},
           //

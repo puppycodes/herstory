@@ -14,8 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SelectOptionPage {
  gender: string;
-  gaming: string;
-  toppings: Array<string>;
+  position: string;
+  them: Array<string>;
   petAlertOpts: any;
   petData: any;
   pets: Array<string>;
@@ -24,14 +24,14 @@ export class SelectOptionPage {
 
     constructor(public navCtrl: NavController ) {
           this.gender = 'f';
-          this.gaming = 'n64';
+          this.position = 'bottom';
 
           this.petAlertOpts = {
             title: 'Like Pets?',
             subTitle: 'Select your favorite'
           };
 
-          this.toppings = ['bacon', 'xcheese'];
+          this.them = ['lesbian', 'pansexual'];
 
           this.petData = [
             { text: 'Bird', value: 'bird' },
@@ -41,8 +41,8 @@ export class SelectOptionPage {
           ];
 
           this.pets = ['cat', 'dog'];
-    }  
-    
+    }
+
   monthChange(val: any) {
     alert(val)
     console.log('Month Change:', val);

@@ -1,39 +1,40 @@
 <ion-header>
-  <ion-navbar  color="lightblue" >
+  <ion-navbar  color="light" >
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Select button</ion-title>
+    <ion-title></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="outer-content">
 
   <ion-list>
-    <ion-list-header>Single Value Select</ion-list-header>
+    <ion-list-header>Single</ion-list-header>
 
     <ion-item>
       <ion-label>Gender</ion-label>
       <ion-select [(ngModel)]="gender">
         <ion-option value="f">Female</ion-option>
         <ion-option value="m">Male</ion-option>
+        <ion-option value="nb">Non-Binary</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-label>Gaming</ion-label>
-      <ion-select [(ngModel)]="gaming" okText="Okay" cancelText="Dismiss">
-        <ion-option value="nes">NES</ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
+      <ion-label>Position</ion-label>
+      <ion-select [(ngModel)]="position" okText="Okay" cancelText="Dismiss">
+        <ion-option value="bottom">Bottom</ion-option>
+        <ion-option value="top">Top</ion-option>
+        <ion-option value="verse">Verse</ion-option>
+        <ion-option value="versetop">Verse Top</ion-option>
+        <ion-option value="versebottom">Verse Bottom</ion-option>
+        <ion-option value="none">None</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-label>Date</ion-label>
+      <ion-label>Birthday</ion-label>
       <ion-select (ionChange)="monthChange($event)">
         <ion-option value="01">January</ion-option>
         <ion-option value="02">February</ion-option>
@@ -66,7 +67,7 @@
   </ion-list>
 
   <ion-list>
-    <ion-list-header>Popover Interface Select</ion-list-header>
+    <ion-list-header>Popup</ion-list-header>
 
     <ion-item>
       <ion-label>Gender</ion-label>
@@ -77,19 +78,19 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Gaming</ion-label>
-      <ion-select [(ngModel)]="gaming" okText="Okay" cancelText="Dismiss" interface="popover">
-        <ion-option value="nes">NES</ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
+      <ion-label>Position</ion-label>
+      <ion-select [(ngModel)]="positon" okText="Okay" cancelText="Dismiss" interface="popover">
+        <ion-option value="bottom">Bottom</ion-option>
+        <ion-option value="top">Top</ion-option>
+        <ion-option value="verse">Verse</ion-option>
+        <ion-option value="versetop">Verse Top</ion-option>
+        <ion-option value="versebottom">Verse Bottom</ion-option>
+        <ion-option value="none">None</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-label>Date</ion-label>
+      <ion-label>Birthday</ion-label>
       <ion-select (ionChange)="monthChange($event)" interface="popover">
         <ion-option value="01">January</ion-option>
         <ion-option value="02">February</ion-option>
@@ -122,30 +123,30 @@
   </ion-list>
 
   <ion-list>
-    <ion-list-header>Multiple Value Select</ion-list-header>
+    <ion-list-header>Multi</ion-list-header>
 
     <ion-item>
-      <ion-label>Toppings</ion-label>
-      <ion-select [(ngModel)]="toppings" multiple="true" cancelText="Nah" okText="Okay!">
-        <ion-option value="bacon">Bacon</ion-option>
-        <ion-option value="olives">Black Olives</ion-option>
-        <ion-option value="xcheese">Extra Cheese</ion-option>
-        <ion-option value="peppers">Green Peppers</ion-option>
-        <ion-option value="mushrooms">Mushrooms</ion-option>
-        <ion-option value="onions">Onions</ion-option>
-        <ion-option value="pepperoni">Pepperoni</ion-option>
-        <ion-option value="pineapple">Pineapple</ion-option>
-        <ion-option value="sausage">Sausage</ion-option>
-        <ion-option value="Spinach">Spinach</ion-option>
+      <ion-label>Them</ion-label>
+      <ion-select [(ngModel)]="them" multiple="true" cancelText="Cancel" okText="Okay!">
+        <ion-option value="lesbian">lesbian</ion-option>
+        <ion-option value="gay">gay</ion-option>
+        <ion-option value="queer">queer</ion-option>
+        <ion-option value="butch">butch</ion-option>
+        <ion-option value="sapiosexual">sapiosexual</ion-option>
+        <ion-option value="pansexual">pansexual</ion-option>
+        <ion-option value="curves">curves</ion-option>
+        <ion-option value="muscles">muscles</ion-option>
+        <ion-option value="tomboy">tomboy</ion-option>
+        <ion-option value="androgynous">androgynous</ion-option>
       </ion-select>
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label>Pets</ion-label>
       <ion-select [(ngModel)]="pets" multiple="true" [selectOptions]="petAlertOpts">
         <ion-option *ngFor="let o of petData" [value]="o.value">{{o.text}}</ion-option>
       </ion-select>
-    </ion-item>
+    </ion-item> -->
 
     <ion-item>
       <ion-label>Disabled</ion-label>
@@ -157,7 +158,7 @@
   </ion-list>
 
   <ion-list>
-    <ion-list-header>Action Sheet Interface Select</ion-list-header>
+    <ion-list-header>Native</ion-list-header>
 
     <ion-item>
       <ion-label>Mute Notifications</ion-label>
@@ -169,7 +170,7 @@
       </ion-select>
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label>Rating</ion-label>
       <ion-select [(ngModel)]="rating" interface="action-sheet">
         <ion-option value="1">1 Star</ion-option>
@@ -177,9 +178,9 @@
         <ion-option value="3">3 Stars</ion-option>
         <ion-option value="4">4 Stars</ion-option>
         <ion-option value="5">5 Stars</ion-option>
-        
+
       </ion-select>
-    </ion-item>
+    </ion-item> -->
 
   </ion-list>
 

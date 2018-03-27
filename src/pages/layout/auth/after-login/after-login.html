@@ -37,6 +37,19 @@
               <h2>{{uid}}</h2>
               <p>Firebase uid</p>
             </ion-item>
+
+            <ion-item>
+              <ion-label>Ghost Mode</ion-label>
+              <ion-toggle (ionChange)="isDisabled = !isDisabled"></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Them</ion-label>
+              <ion-toggle (ionChange)="isDisabled = !isDisabled"></ion-toggle>
+            </ion-item>
+
+
+
         </ion-list>
 
         <button ion-button block mode="ios" color="primary" (click)="logout()">
