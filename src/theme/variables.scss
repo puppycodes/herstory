@@ -3,6 +3,7 @@ $font-path: "../assets/fonts";
 @import "ionic.globals";
 
 
+
 $colors: (
   primary:    #000000,
   secondary:  #32db64,
@@ -342,7 +343,6 @@ $text-input-md-show-focus-highlight: false;
 ion-app, ion-nav, ion-tab, ion-tabs, .app-root {
 
 
-
 }
 
 .icon-ios-light {
@@ -357,6 +357,23 @@ display: none !important;
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+ion-app.ios {
+    font-family:"Portrait Text" !important;
+}
+
+
+
+.item-ios p {
+  color: #000000 !important;
+}
+
+.label-ios h2 {
+  border-bottom: 1px solid black;
+}
+
+.toggle-ios.toggle-checked .toggle-icon {
+    background-color: #00FFFF !important;
+}
 
 
 
